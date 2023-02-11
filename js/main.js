@@ -18,9 +18,9 @@ counterValue.oninput = () => {
   value = +counterValue.value;
   return (
     isNaN(value)
-      ? (warningText.innerHTML = "please add a valid number")
+      ? ((warningText.innerHTML = "please add a valid number"), (value = 0))
       : value < 0
-      ? (warningText.innerHTML = "please add a positive number")
+      ? (warningText.innerHTML = "please add a positive number")((value = 0))
       : (warningText.innerHTML = ""),
     value
   );
